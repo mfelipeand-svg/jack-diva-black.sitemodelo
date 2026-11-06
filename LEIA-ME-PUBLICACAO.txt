@@ -1,0 +1,11 @@
+JACK DIVA BLACK — ATUALIZAÇÃO DE DEMONSTRAÇÃO
+
+Conteúdo:
+- index.html atualizado com galeria de 5 fotos reais da Jack.
+- Seção Leque Africano com 4 estampas, descrição e preço informado de R$ 75,00.
+- 9 imagens WebP otimizadas, preservando boa qualidade visual.
+- Logo original e identidade visual mantidas.
+
+Publicação:
+Envie o conteúdo desta pasta para a branch feat/jack-fotos-reais-leques do repositório mfelipeand-svg/jack-diva-black.sitemodelo.
+Não envie para main. Depois, gere uma implantação Preview na Vercel para validar antes de qualquer publicação em produção.
