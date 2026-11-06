@@ -1,0 +1,14 @@
+JACK DIVA BLACK — DEMONSTRAÇÃO DO SITE
+
+Conteúdo:
+- index.html: página inicial responsiva.
+- assets/: logo original e fotografias ilustrativas temporárias.
+
+IMPORTANTE:
+As fotografias de turbantes, acessórios, colares e pulseiras são ilustrativas e não representam necessariamente itens reais, preços ou estoque. Devem ser substituídas pelas fotos oficiais após autorização da cliente.
+A logo original foi mantida sem redesenho. O site utiliza os canais públicos conhecidos da marca:
+Instagram: https://www.instagram.com/jackdivablack/
+Linktree: https://linktr.ee/Jackdivablack
+
+Publicação: conteúdo estático, sem backend, sem banco de dados e sem variáveis de ambiente.
+Para Vercel, envie index.html e a pasta assets/ para a raiz do repositório conectado.
