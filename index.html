@@ -35,6 +35,23 @@ footer{background:#100e0e;color:#e7d9cd;padding:34px 0 22px}.footer-grid{display
 @media(max-width:850px){.jack-gallery-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.jack-gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.jack-gallery-card figcaption{font-size:16px}.product-grid{gap:12px}.product-info{padding:12px}.product-info h3{font-size:19px}}
 
+
+/* Carrosséis editoriais: deslize no toque ou use as setas */
+.carousel-shell{position:relative;padding:0 42px}
+.carousel-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:8px 2px 22px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.carousel-track::-webkit-scrollbar{display:none}
+.carousel-track>*{flex:0 0 calc((100% - 36px)/3);scroll-snap-align:start}
+.jack-gallery-card,.product-card{transition:transform .25s,box-shadow .25s}
+.jack-gallery-card:hover,.product-card:hover{transform:translateY(-4px);box-shadow:0 18px 38px #29140d20}
+.carousel-arrow{position:absolute;top:44%;transform:translateY(-50%);z-index:3;width:38px;height:38px;border:1px solid #55271e33;border-radius:50%;background:#fffaf0;color:#55271e;box-shadow:0 5px 18px #29140d20;font-size:22px;cursor:pointer;display:grid;place-items:center}
+.carousel-arrow:hover{background:#e32620;color:white}
+.carousel-arrow.prev{left:0}.carousel-arrow.next{right:0}
+.carousel-hint{text-align:center;color:var(--muted);font-size:11px;letter-spacing:.08em;margin:0 0 8px}
+.carousel-track .jack-gallery-card img{aspect-ratio:4/5;object-fit:cover;object-position:center 28%}
+.carousel-track .product-card img{aspect-ratio:4/5;object-fit:cover}
+@media(max-width:850px){.carousel-track>*{flex-basis:calc((100% - 18px)/2)}}
+@media(max-width:600px){.carousel-shell{padding:0 25px}.carousel-track{gap:13px;padding-bottom:17px}.carousel-track>*{flex-basis:78%}.carousel-arrow{width:32px;height:32px;font-size:18px;background:#fffaf0ed}.carousel-arrow.prev{left:-2px}.carousel-arrow.next{right:-2px}.carousel-hint{font-size:10px}}
+
 </style>
 </head>
 <body>
@@ -62,13 +79,13 @@ footer{background:#100e0e;color:#e7d9cd;padding:34px 0 22px}.footer-grid{display
       <h2>Um turbante, muitas formas de expressão.</h2>
       <p>Conheça alguns dos looks apresentados pela Jack Diva Black. Cada amarração valoriza a beleza, a cor e a personalidade de quem usa.</p>
     </div>
-    <div class="jack-gallery-grid">
+    <p class="carousel-hint">DESLIZE PARA EXPLORAR · ✦</p><div class="carousel-shell"><button class="carousel-arrow prev" type="button" aria-label="Fotos anteriores">‹</button><div class="carousel-track jack-gallery-grid" data-carousel>
       <figure class="jack-gallery-card"><img src="jack-turbante-vermelho.webp" alt="Jack usando turbante vermelho e brincos dourados" loading="lazy"><figcaption>Turbante vermelho</figcaption></figure>
       <figure class="jack-gallery-card"><img src="jack-turbante-preto.webp" alt="Jack usando turbante preto e acessórios" loading="lazy"><figcaption>Turbante preto</figcaption></figure>
       <figure class="jack-gallery-card"><img src="jack-turbante-amarelo.webp" alt="Jack usando turbante amarelo com laço" loading="lazy"><figcaption>Turbante amarelo</figcaption></figure>
       <figure class="jack-gallery-card"><img src="jack-turbante-azul.webp" alt="Jack usando turbante azul e brinco azul" loading="lazy"><figcaption>Turbante azul</figcaption></figure>
       <figure class="jack-gallery-card"><img src="jack-turbante-pink.webp" alt="Jack usando turbante pink" loading="lazy"><figcaption>Turbante pink</figcaption></figure>
-    </div>
+    </div><button class="carousel-arrow next" type="button" aria-label="Próximas fotos">›</button></div>
     <p class="jack-gallery-note">Fotografias reais fornecidas pela marca.</p>
   </div>
 </section>
@@ -81,12 +98,12 @@ footer{background:#100e0e;color:#e7d9cd;padding:34px 0 22px}.footer-grid{display
       <h2>Leque Africano</h2>
       <p>Confeccionado em tecido Ankara africano com acabamento em couro. Escolha a estampa que combina com você e consulte a disponibilidade diretamente com a Jack Diva Black.</p>
     </div>
-    <div class="product-grid">
+    <p class="carousel-hint">DESLIZE PARA VER AS ESTAMPAS · ✦</p><div class="carousel-shell"><button class="carousel-arrow prev" type="button" aria-label="Produtos anteriores">‹</button><div class="carousel-track product-grid" data-carousel>
       <article class="product-card"><img src="leque-africano-1.webp" alt="Leque Africano em tecido Ankara com estampa azul e branca" loading="lazy"><div class="product-info"><h3>Leque Africano</h3><p>Estampa azul e branca · acabamento em couro</p><div class="product-price">R$ 75,00</div><a class="product-action" href="https://linktr.ee/Jackdivablack" target="_blank" rel="noopener">Consultar / pedir ↗</a></div></article>
       <article class="product-card"><img src="leque-africano-2.webp" alt="Leque Africano em tecido Ankara multicolorido" loading="lazy"><div class="product-info"><h3>Leque Africano</h3><p>Estampa multicolorida · acabamento em couro</p><div class="product-price">R$ 75,00</div><a class="product-action" href="https://linktr.ee/Jackdivablack" target="_blank" rel="noopener">Consultar / pedir ↗</a></div></article>
       <article class="product-card"><img src="leque-africano-3.webp" alt="Leque Africano em tecido Ankara azul, amarelo e vinho" loading="lazy"><div class="product-info"><h3>Leque Africano</h3><p>Estampa azul, amarelo e vinho · acabamento em couro</p><div class="product-price">R$ 75,00</div><a class="product-action" href="https://linktr.ee/Jackdivablack" target="_blank" rel="noopener">Consultar / pedir ↗</a></div></article>
       <article class="product-card"><img src="leque-africano-4.webp" alt="Leque Africano em tecido Ankara amarelo e azul" loading="lazy"><div class="product-info"><h3>Leque Africano</h3><p>Estampa amarela e azul · acabamento em couro</p><div class="product-price">R$ 75,00</div><a class="product-action" href="https://linktr.ee/Jackdivablack" target="_blank" rel="noopener">Consultar / pedir ↗</a></div></article>
-    </div>
+    </div><button class="carousel-arrow next" type="button" aria-label="Próximos produtos">›</button></div>
     <p class="jack-gallery-note">Preço informado pela marca: R$ 75,00. Confirme disponibilidade e condições diretamente com a empresa.</p>
   </div>
 </section>
@@ -97,4 +114,18 @@ footer{background:#100e0e;color:#e7d9cd;padding:34px 0 22px}.footer-grid{display
 </main>
 <footer><div class="wrap"><div class="footer-grid"><div class="footer-brand"><img src="assets/logo-original.webp" alt=""><div><strong>JACK DIVA BLACK</strong><small>Moda afro · Salvador, Bahia</small></div></div><div class="social"><a href="https://www.instagram.com/jackdivablack/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://linktr.ee/Jackdivablack" target="_blank" rel="noopener">Atendimento ↗</a></div></div><div class="copyright"><span>© Jack Diva Black. Demonstração de apresentação.</span><span>Imagens ilustrativas sujeitas à substituição pelas fotos oficiais.</span></div></div></footer>
 <a class="floating" href="https://linktr.ee/Jackdivablack" target="_blank" rel="noopener" aria-label="Abrir canais de atendimento">✦ Fale com a Diva</a>
+<script>
+document.querySelectorAll('.carousel-shell').forEach(shell=>{
+ const track=shell.querySelector('[data-carousel]');
+ const prev=shell.querySelector('.prev');
+ const next=shell.querySelector('.next');
+ const step=()=>Math.max(track.clientWidth*.82,220);
+ prev.addEventListener('click',()=>track.scrollBy({left:-step(),behavior:'smooth'}));
+ next.addEventListener('click',()=>track.scrollBy({left:step(),behavior:'smooth'}));
+ const sync=()=>{prev.disabled=track.scrollLeft<8;next.disabled=track.scrollLeft+track.clientWidth>=track.scrollWidth-8;};
+ track.addEventListener('scroll',sync,{passive:true});
+ window.addEventListener('resize',sync);
+ sync();
+});
+</script>
 </body></html>
