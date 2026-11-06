@@ -52,6 +52,15 @@ footer{background:#100e0e;color:#e7d9cd;padding:34px 0 22px}.footer-grid{display
 @media(max-width:850px){.carousel-track>*{flex-basis:calc((100% - 18px)/2)}}
 @media(max-width:600px){.carousel-shell{padding:0 25px}.carousel-track{gap:13px;padding-bottom:17px}.carousel-track>*{flex-basis:78%}.carousel-arrow{width:32px;height:32px;font-size:18px;background:#fffaf0ed}.carousel-arrow.prev{left:-2px}.carousel-arrow.next{right:-2px}.carousel-hint{font-size:10px}}
 
+
+/* Hero com a logomarca como peça central */
+.hero-photo.hero-brand-mark{height:auto;aspect-ratio:1;width:min(100%,440px);margin-inline:auto;border-radius:50%;padding:clamp(28px,5vw,58px);display:grid;place-items:center;background:radial-gradient(circle at 50% 42%,#fff8e8 0 42%,#f5c928 43% 44%,#e32620 45% 46%,#211714 47% 100%);border:3px solid var(--yellow);box-shadow:0 0 0 10px #f5c92818,0 28px 70px #0008;animation:brandFloat 6s ease-in-out infinite}
+.hero-photo.hero-brand-mark img{width:100%;height:100%;object-fit:contain;object-position:center;filter:drop-shadow(0 8px 12px #17131330)}
+.hero-photo.hero-brand-mark:after{display:none}
+@keyframes brandFloat{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-9px) rotate(1deg)}}
+@media(max-width:650px){.hero-photo.hero-brand-mark{width:min(82vw,350px);height:auto;aspect-ratio:1;padding:34px}}
+@media(prefers-reduced-motion:reduce){.hero-photo.hero-brand-mark{animation:none}}
+
 </style>
 </head>
 <body>
@@ -62,7 +71,7 @@ footer{background:#100e0e;color:#e7d9cd;padding:34px 0 22px}.footer-grid{display
 <a class="btn" href="https://linktr.ee/Jackdivablack" target="_blank" rel="noopener">Fale com a Diva ↗</a><button class="menu" aria-label="Abrir menu" aria-expanded="false" onclick="const n=document.getElementById('nav-links');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">☰</button>
 </div></header>
 <main>
-<section class="hero" id="inicio"><div class="wrap hero-grid"><div><div class="eyebrow">Moda · identidade · representatividade</div><h1>Turbantes, acessórios e <em>estilo afro.</em></h1><p>Peças que celebram a beleza, a ancestralidade e a autenticidade. Vista sua história e expresse sua identidade.</p><div class="hero-actions"><a class="btn yellow" href="#colecoes">Conheça as coleções ↗</a><a class="btn dark" href="https://www.instagram.com/jackdivablack/" target="_blank" rel="noopener">Instagram ↗</a></div></div><div class="hero-photo"><img src="jack-turbante-vermelho.webp" alt="Jack Diva Black usando turbante vermelho e acessórios"></div></div></section>
+<section class="hero" id="inicio"><div class="wrap hero-grid"><div><div class="eyebrow">Moda · identidade · representatividade</div><h1>Turbantes, acessórios e <em>estilo afro.</em></h1><p>Peças que celebram a beleza, a ancestralidade e a autenticidade. Vista sua história e expresse sua identidade.</p><div class="hero-actions"><a class="btn yellow" href="#colecoes">Conheça as coleções ↗</a><a class="btn dark" href="https://www.instagram.com/jackdivablack/" target="_blank" rel="noopener">Instagram ↗</a></div></div><div class="hero-photo hero-brand-mark"><img src="assets/logo-original.webp" alt="Logomarca original da Jack Diva Black"></div></div></section>
 <div class="strip">Ancestralidade que inspira · Estilo que representa · Beleza que transforma</div>
 <section class="section" id="colecoes"><div class="wrap"><div class="section-head"><div class="kicker">Explore a marca</div><h2>Moda que conta histórias</h2><p>Conheça algumas das expressões da Jack Diva Black. Explore também os produtos reais apresentados pela marca.</p></div>
 <div class="collection-grid">
